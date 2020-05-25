@@ -11,27 +11,27 @@ class Start extends Phaser.Scene {
     let mode = this.add.text(config.width / 2, config.height / 2 - 150, "Please Select Game Mode...",
       {fill: "#000", align: "center", fontSize: 20}).setOrigin(0.5)
 
-    let game3 = new Phaser.Geom.Rectangle((config.width - 100) / 2 - 80, (config.height - 50) / 2 - 25, 100, 50)
+    let game3 = new Phaser.Geom.Rectangle((config.width - 100) / 2 - 80, (config.height - 50) / 2 - 25, 100 * window.devicePixelRatio, 50 * window.devicePixelRatio)
     this.graphics.fillRectShape(game3)
     this.add.text(game3.centerX, game3.centerY, "3x3", {fill: "#000", fontSize: 30}).setOrigin(0.5)
 
-    let game4 = new Phaser.Geom.Rectangle((config.width - 100) / 2 + 80, (config.height - 50) / 2 - 25, 100, 50)
+    let game4 = new Phaser.Geom.Rectangle((config.width - 100) / 2 + 80, (config.height - 50) / 2 - 25, 100 * window.devicePixelRatio, 50 * window.devicePixelRatio)
     this.graphics.fillRectShape(game4)
     this.add.text(game4.centerX, game4.centerY, "4x4", {fill: "#000", fontSize: 30}).setOrigin(0.5)
 
-    let game5 = new Phaser.Geom.Rectangle((config.width - 100) / 2 - 80, (config.height - 50) / 2 + 50, 100, 50)
+    let game5 = new Phaser.Geom.Rectangle((config.width - 100) / 2 - 80, (config.height - 50) / 2 + 50, 100 * window.devicePixelRatio, 50 * window.devicePixelRatio)
     this.graphics.fillRectShape(game5)
     this.add.text(game5.centerX, game5.centerY, "5x5", {fill: "#000", fontSize: 30}).setOrigin(0.5)
 
-    let game6 = new Phaser.Geom.Rectangle((config.width - 100) / 2 + 80, (config.height - 50) / 2 + 50, 100, 50)
+    let game6 = new Phaser.Geom.Rectangle((config.width - 100) / 2 + 80, (config.height - 50) / 2 + 50, 100 * window.devicePixelRatio, 50 * window.devicePixelRatio)
     this.graphics.fillRectShape(game6)
-    this.add.text(game6.centerX, game6.centerY, "6x6", {fill: "#000", fontSize: 30}).setOrigin(0.5)
+    this.add.text(game6.centerX, game6.centerY, "6x6", {fill: "#000", fontSize: 30 * window.devicePixelRatio}).setOrigin(0.5)
 
     this.graphics.fillStyle(0x4281f5)
-    let rect = new Phaser.Geom.Rectangle((config.width - 200) / 2, (config.height - 50) / 2 + 150, 200, 50)
+    let rect = new Phaser.Geom.Rectangle((config.width - 200) / 2, (config.height - 50) / 2 + 150, 200 * window.devicePixelRatio, 50 * window.devicePixelRatio)
     this.graphics.fillRectShape(rect)
 
-    this.add.text(rect.centerX, rect.centerY, "Start Game", {fill: "#fff", fontSize: 30}).setOrigin(0.5)
+    this.add.text(rect.centerX, rect.centerY, "Start Game", {fill: "#fff", fontSize: 30 * window.devicePixelRatio}).setOrigin(0.5)
     this.input.on('pointerup', pointer => {
       const x = pointer.x
       const y = pointer.y

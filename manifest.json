@@ -3,8 +3,8 @@
   "short_name": "Games",
   "display": "standalone",
   "orientation": "landscape",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/games/",
+  "start_url": "/games/",
   "icons": [{
     "src": "icons/icon-144.png",
     "sizes": "144x144"

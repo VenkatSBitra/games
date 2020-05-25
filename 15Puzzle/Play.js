@@ -89,9 +89,9 @@ class Play extends Phaser.Scene {
   }
   update() {
     if(JSON.stringify(this.puzzle) === JSON.stringify(this.originalPuzzle)) {
-      this.add.text((this.boardSize - 1) * this.tileDimension + this.tileDimension / 2, (this.boardSize - 1) * this.tileDimension + this.tileDimension / 2, "You WON!!!", {
+      this.add.text((this.boardSize - 1) * this.tileDimension + this.tileDimension / 2, (this.boardSize - 1) * this.tileDimension + this.tileDimension / 2, "You\nWON!!!", {
         fill: "#000",
-        fontSize: 20,
+        fontSize: 25 * window.devicePixelRatio,
         align: "center",
         justifyContent: "center"
       }).setOrigin(0.5)
