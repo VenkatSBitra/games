@@ -4,6 +4,7 @@ let filesToCache = [
   '/',
   './index.html',
   './phaser.min.js',
+  './bulma.min.css',
   './15Puzzle/assets/1.png',
   './15Puzzle/assets/2.png',
   './15Puzzle/assets/3.png',

@@ -8,18 +8,87 @@
     <link rel="icon" href="icons/icon-144.png" sizes="144x144" />
     <link rel="icon" href="icons/icon-192.png" sizes="192x192" />
     <link rel="icon" href="icons/icon-512.png" sizes="512x512" />
+    <link rel="stylesheet" href="bulma.min.css" />
     <title>Games by Venkat</title>
 </head>
 <body>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Add to home screen?</p>
-        <button onclick="offlinePrompt()">Install</button>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a href="/games/" class="navbar-item">
+            <img src="icons/icon-144.png" alt="Icon">
+        </a>
+    </div>
+</nav>
+
+<div style="padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px">
+
+    <article class="message is-info" id="myModal" style="justify-content: center">
+        <div class="message-header">
+            <p>Info</p>
+            <button class="delete close" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+            <span>Want to install and add to Home Screen</span>
+            <button class="button is-success is-small" onclick="offlinePrompt()" style="float: right">Install</button>
+        </div>
+    </article>
+
+    <div class="columns">
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">15-Puzzle (Deprecated)</p>
+                            <p class="subtitle is-6">Built in Canvas</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Build in Canvas. Click the tile to move. Refresh at the end of the game.
+                        <br /><hr />
+                        <a href="15PuzzleCanvas/file.html" class="button is-success">Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">n-Puzzle</p>
+                            <p class="subtitle is-6">Built in Phaser</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Build in Phaser. This game offers 8-Puzzle, 15-Puzzle, 24-Puzzle and 48-Puzzle.
+                        Click tile to move. Refreshes after 5 seconds at the end of game.
+                        <br /><hr />
+                        <a href="15Puzzle/file.html" class="button is-success">Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
     </div>
 </div>
+
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
@@ -38,9 +107,9 @@
     modal.style.display = 'block';
   });
   // Get the modal
-  var modal = document.getElementById('myModal');
+  const modal = document.getElementById('myModal');
   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName('close')[0];
+  const span = document.getElementsByClassName('close')[0];
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target === modal) {
@@ -56,9 +125,6 @@
   }
 </script>
 
-<a href="15Puzzle/file.html" style="font-size: 30px">15 Puzzle (Recommended)</a>
-<br />
-<a href="15PuzzleCanvas/file.html" style="font-size: 30px">15 Puzzle (Deprecated)</a>
 
 </body>
 </html>
