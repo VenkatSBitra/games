@@ -2,7 +2,6 @@
   "name": "Games by Venkat",
   "short_name": "Games",
   "display": "standalone",
-  "orientation": "landscape",
   "scope": "/games/",
   "start_url": "/games/",
   "icons": [{
