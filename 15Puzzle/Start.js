@@ -8,7 +8,7 @@ class Start extends Phaser.Scene {
     this.graphics = this.add.graphics()
     this.graphics.fillStyle(0xe6c1c1)
 
-    let mode = this.add.text(config.width / 2, config.height / 2 - 150, "Please Select Game Mode...",
+    let mode = this.add.text(config.width / 2, config.height / 2 - 150 * window.devicePixelRatio, "Please Select Game Mode...",
       {fill: "#000", align: "center", fontSize: 20 * window.devicePixelRatio}).setOrigin(0.5)
 
     let game3 = new Phaser.Geom.Rectangle((config.width - 100 * window.devicePixelRatio) / 2 - 80 * window.devicePixelRatio, (config.height - 50 * window.devicePixelRatio) / 2 - 25 * window.devicePixelRatio, 100 * window.devicePixelRatio, 50 * window.devicePixelRatio)
