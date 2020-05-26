@@ -1,5 +1,3 @@
-const s = Math.min(window.innerHeight, window.innerWidth)
-
 const config = {
   type: Phaser.AUTO,
   width: 540,

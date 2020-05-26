@@ -95,9 +95,12 @@ class Play extends Phaser.Scene {
         align: "center",
         justifyContent: "center"
       }).setOrigin(0.5)
-      if(this.gamePlay) setTimeout(() => {
-        this.scene.start('start')
-      }, 5000)
+      if(this.gamePlay) this.time.addEvent({
+        delay: 5000,
+        callback: () => this.scene.start('start'),
+        callbackScope: this,
+        loop: false
+      })
       this.gamePlay = false
     }
   }
