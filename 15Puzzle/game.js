@@ -7,7 +7,7 @@ const config = {
   scene: [Start, Play],
   backgroundColor: 0xffffff,
   scale: {
-    scale: Phaser.Scale.FIT,
+    mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   }
 };
