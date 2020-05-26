@@ -5,7 +5,7 @@ const config = {
   scene: [Play],
   backgroundColor: 0xffffff,
   scale: {
-    //mode: Phaser.Scale.FIT,
+    mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   physics: {

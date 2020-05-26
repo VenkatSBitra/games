@@ -72,7 +72,8 @@ class Play extends Phaser.Scene {
 
     this.physics.add.collider(this.ball, this.paddle, null, null, this)
     this.physics.add.collider(this.ball, this.layers, (ball, brick) => {brick.destroy(); console.log(this.tileCount())}, null, this)
-    this.pointer = this.input.activePointer
+    
+    this.input.setPollAlways()
   }
 
   update() {
@@ -93,10 +94,10 @@ class Play extends Phaser.Scene {
       this.ball.setVelocityX(this.ball.body.velocity.x < 0 ? -200 : 200)
       this.ball.setVelocityY(this.ball.body.velocity.y < 0 ? -k : k)
     }
-    if(this.keys.left.isDown || (this.pointer.isDown && this.pointer.x < config.width / 2)) {
+    if(this.keys.left.isDown || (game.input.activePointer.isDown && game.input.activePointer.x < config.width / 2)) {
       this.paddle.setVelocityX(-200)
       if(!this.gameStart) this.ball.setVelocityX(-200)
-    } else if(this.keys.right.isDown || (this.pointer.isDown && this.pointer.x > config.width / 2)) {
+    } else if(this.keys.right.isDown || (game.input.activePointer.isDown && game.input.activePointer.x > config.width / 2)) {
       this.paddle.setVelocityX(200)
       if(!this.gameStart) this.ball.setVelocityX(200)
     }
