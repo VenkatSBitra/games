@@ -80,7 +80,7 @@ class Play extends Phaser.Scene {
     this.paddle.setVelocityX(0)
     if(!this.gameStart) {
       this.ball.setVelocityX(0)
-      if(this.keys.space.isDown) {
+      if(this.keys.space.isDown || game.input.activePointer.isDown) {
         this.gameStart = true
         let n = Math.random() * 60 + 170
         let s = Math.random() * 20 + 280
