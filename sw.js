@@ -45,7 +45,16 @@ let filesToCache = [
   './15Puzzle/Play.js',
   './15Puzzle/Start.js',
   './15PuzzleCanvas/file.html',
-  './15PuzzleCanvas/canvas.js'
+  './15PuzzleCanvas/canvas.js',
+  './BreakOut/file.html',
+  './BreakOut/game.js',
+  './BreakOut/Play.js',
+  './BreakOut/Start.js',
+  './BreakOut/assets/ball.png',
+  './BreakOut/assets/gtile.png',
+  './BreakOut/assets/otile.png',
+  './BreakOut/assets/rtile.png',
+  './BreakOut/assets/paddle.png'
 ]
 
 self.addEventListener('install', function (event) {
