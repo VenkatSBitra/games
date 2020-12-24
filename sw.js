@@ -54,7 +54,10 @@ let filesToCache = [
   './BreakOut/assets/gtile.png',
   './BreakOut/assets/otile.png',
   './BreakOut/assets/rtile.png',
-  './BreakOut/assets/paddle.png'
+  './BreakOut/assets/paddle.png',
+  './TicTacToe/game.js',
+  './TicTacToe/game.js.map',
+  './TicTacToe/index.html'
 ]
 
 self.addEventListener('install', function (event) {
